@@ -66,6 +66,7 @@ var (
 
 // Reload 重载日志
 func Reload() error {
+	Destroy()
 	setLogger()
 	//addLogger()
 	if conf.MaxBackups > 1 {
@@ -249,7 +250,7 @@ func setLogger() {
 	}
 	if conf.EnableConsole {
 		log.SetFormatter(&LogFormatter{
-			EnableColor:     true,
+			EnableColor:     conf.EnableColor,
 			TimestampFormat: "2006-01-02 15:04:05",
 			CallerLevel:     7,
 		})
