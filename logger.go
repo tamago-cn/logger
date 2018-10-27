@@ -115,14 +115,14 @@ type LogConf struct {
 	EnableConsole   bool   `ini:"enable_console" comment:"启用控制台打印"`
 	EnableTime      bool   `ini:"enable_time" comment:"启用时间戳"`
 	EnablePos       bool   `ini:"enable_pos" comment:"增加日志位置"`
-	EnableColor     bool   `ini:"enable_color" comment:"日志颜色"`
-	TimestampFormat string `ini:"timestamp_format" comment:"时间格式"`
-	LogFile         string `ini:"log_file" comment:"日志文件名"`
-	Level           string `ini:"level" comment:"日志等级"`
-	MaxSize         int    `ini:"max_size" comment:"日志文件大小最大值, 单位(MB)"`
-	MaxDays         int    `ini:"max_days" comment:"日志最大保存时间, 单位(天)"`
-	MaxBackups      int    `ini:"mac_backups" comment:"日志备份最大数量"`
-	Compress        bool   `ini:"compress" comment:"是否压缩"`
+	EnableColor     bool   `ini:"enable_color" json:"enable_color" comment:"日志颜色"`
+	TimestampFormat string `ini:"timestamp_format" json:"timestamp_format" comment:"时间格式"`
+	LogFile         string `ini:"log_file" json:"log_file" comment:"日志文件名"`
+	Level           string `ini:"level" json:"level" comment:"日志等级"`
+	MaxSize         int    `ini:"max_size" json:"max_size" comment:"日志文件大小最大值, 单位(MB)"`
+	MaxDays         int    `ini:"max_days" json:"max_days" comment:"日志最大保存时间, 单位(天)"`
+	MaxBackups      int    `ini:"mac_backups" json:"mac_backups" comment:"日志备份最大数量"`
+	Compress        bool   `ini:"compress" json:"compress"  comment:"是否压缩"`
 }
 
 // LogFormatter 日志格式化
